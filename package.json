@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-npm",
+  "version": "1.0.0",
+  "description": "lab-07",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OviParasca/07-nodejs-npm-express.git"
+  },
+  "keywords": [
+    "lab7",
+    "nodejs",
+    "npm",
+    "express"
+  ],
+  "author": "ovi-chris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OviParasca/07-nodejs-npm-express/issues"
+  },
+  "homepage": "https://github.com/OviParasca/07-nodejs-npm-express#readme",
+  "dependencies": {
+    "package.json": "^2.0.1"
+  }
+}
