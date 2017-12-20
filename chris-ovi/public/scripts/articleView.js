@@ -73,8 +73,8 @@ articleView.setTeasers = () => {
   });
 };
 
-// COMMENT: When/where is this function invoked? What event ultimately triggers its execution? Explain the sequence of code execution when this function is invoked.
-// PUT YOUR RESPONSE HERE
+// COMMENTED: When/where is this function invoked? What event ultimately triggers its execution? Explain the sequence of code execution when this function is invoked.
+// This function is invoked in new.html upon page load. It shows tab content (nav, filter), hides JSON article data, listens for text input, updates article every time a change is made, and stores article data upon submit.
 articleView.initNewArticlePage = () => {
   $('.tab-content').show();
   $('#export-field').hide();
@@ -86,8 +86,8 @@ articleView.initNewArticlePage = () => {
   $('#new-form').on('submit', articleView.submit);
 };
 
-// COMMENT: When is this function called? What event ultimately triggers its execution?
-// PUT YOUR RESPONSE HERE
+// COMMENTED: When is this function called? What event ultimately triggers its execution?
+// This function is called whenever input is made and/or changed.
 articleView.create = () => {
   let article;
   $('#articles').empty();
@@ -111,8 +111,8 @@ articleView.create = () => {
   $('#article-json').val(`${JSON.stringify(article)},`);
 };
 
-// COMMENT: When is this function called? What event ultimately triggers its execution?
-// PUT YOUR RESPONSE HERE
+// COMMENTED: When is this function called? What event ultimately triggers its execution?
+// Once required inputs are made, a click of the submit button triggers this function and stores new article data.
 articleView.submit = event => {
   event.preventDefault();
   let article = new Article({
@@ -124,8 +124,8 @@ articleView.submit = event => {
     publishedOn: $('#article-published:checked').length ? new Date() : null
   });
 
-  // COMMENT: Where is this function defined? When is this function called? What event ultimately triggers its execution?
-  // PUT YOUR RESPONSE HERE
+  // COMMENTED: Where is this function defined? When is this function called? What event ultimately triggers its execution?
+  // This function is defined in article.js. The function is called when the user fully completes the form and submits data via click of the submit button.
   article.insertRecord();
 }
 
